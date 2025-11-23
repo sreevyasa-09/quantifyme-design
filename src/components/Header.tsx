@@ -10,7 +10,7 @@ export function Header() {
             <Activity className="h-5 w-5 text-primary-foreground" />
           </div>
           <h1 className="text-xl font-bold">
-            <span className="text-primary">Quantify</span>Me
+            <span className="text-primary">Pacer</span> Pedometer
           </h1>
         </div>
 
