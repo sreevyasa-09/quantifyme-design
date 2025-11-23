@@ -14,13 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          age: number
+          created_at: string
+          height: number
+          id: string
+          recommended_daily_steps: number
+          updated_at: string
+          weight: number
+        }
+        Insert: {
+          age: number
+          created_at?: string
+          height: number
+          id: string
+          recommended_daily_steps: number
+          updated_at?: string
+          weight: number
+        }
+        Update: {
+          age?: number
+          created_at?: string
+          height?: number
+          id?: string
+          recommended_daily_steps?: number
+          updated_at?: string
+          weight?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      calculate_recommended_steps: {
+        Args: { p_age: number; p_height: number; p_weight: number }
+        Returns: number
+      }
     }
     Enums: {
       [_ in never]: never
